@@ -4,11 +4,11 @@ def r_id():
 
     x = input("Enter ID: ")
 
-    if len(x) != 9 or x[6:9] == '000':
+    if len(x) != 9:
         print("Not accepted")
         exit()
 
-    if x[0:3] == '011':
+    if x[0:3] == '011' and x[6:9] != '000':
         if x[5] == '3' or x[5] == '1' or x[5] == '2':
             if (x[6] >= '0' and x[6] <= '9') or (x[7] >= '0' and x[7] <= '9') or x[8] >= '0' and x[8] <= '9':
                 print("Accepted")
@@ -18,7 +18,6 @@ def r_id():
     else: flag = 0
     if flag == 0:
         print("Not accepted")
-
 
 def check():
     flag, flag2 , flag3 = 0, 0, 0
