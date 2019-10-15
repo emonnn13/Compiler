@@ -1,6 +1,12 @@
-flag = 0
-def main():
+def finish():
+    print("Not Accepted!")
+    exit()
+
+def check():
+    flag = 0
     x = input("Enter: ")
+    if len(x)<3 :
+       finish()
     if x[0] >= '0' or x[0] <= 9:
         if x[1].isupper() :
             if not x[2].isalpha():
@@ -17,4 +23,4 @@ def main():
     else:
         print("Not Accepted.")
 if __name__ == "__main__":
-    main()
+    check()
